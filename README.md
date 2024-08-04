@@ -74,7 +74,7 @@ function FunPage() {
 You can also use the `force?` parameter to close the component as fast as possible (e.g. avoid animations)
 
 ```tsx
-import { useCloseContext } from "@hazae41/react-close-context"
+import { CloseContext, useCloseContext } from "@hazae41/react-close-context"
 
 function Dialog(props: ChildrenProps) {
   const { children } = props
