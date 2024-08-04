@@ -6,7 +6,7 @@ CloseContext provides a `close(force?)` function to React
 npm i @hazae41/react-close-context
 ```
 
-[**Node Package 📦**](https://www.npmjs.com/package/@hazae41/chemin)
+[**Node Package 📦**](https://www.npmjs.com/package/@hazae41/react-close-context)
 
 ## Features
 
