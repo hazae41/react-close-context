@@ -50,6 +50,6 @@
     "unit-tested"
   ],
   "dependencies": {
-    "@hazae41/option": "^1.0.27"
+    "@hazae41/option": "^1.1.3"
   }
 }
