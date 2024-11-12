@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@hazae41/react-close-context",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CloseContext provides a close(force?) function to React",
   "homepage": "https://github.com/hazae41/react-close-context",
   "repository": "github:hazae41/react-close-context",
