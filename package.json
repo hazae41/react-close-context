@@ -3,45 +3,30 @@
   "name": "@hazae41/react-close-context",
   "version": "1.0.2",
   "description": "CloseContext provides a close(force?) function to React",
-  "homepage": "https://github.com/hazae41/react-close-context",
   "repository": "github:hazae41/react-close-context",
   "author": "hazae41",
   "license": "MIT",
-  "main": "./dist/cjs/index.cjs",
-  "module": "./dist/esm/index.mjs",
-  "types": "./dist/types/index.d.ts",
-  "sideEffects": false,
-  "files": [
-    "./dist/esm",
-    "./dist/cjs",
-    "./dist/types"
-  ],
   "scripts": {
-    "build": "rimraf dist && rollup -c",
-    "test": "node ./dist/test/index.test.mjs",
-    "prepare": "npm run build"
+    "examine": "deno lint ./src && deno check ./src && deno test ./src",
+    "prepack": "rm -rf ./out && tsc && tscousin"
   },
-  "devDependencies": {
-    "@hazae41/phobos": "^1.0.10",
-    "@hazae41/rimraf": "^1.0.1",
-    "@rollup/plugin-typescript": "^11.1.6",
-    "@types/node": "^20.11.16",
-    "@types/react": "^18.3.3",
-    "rollup": "^4.9.6",
-    "rollup-plugin-dts": "^6.1.0",
-    "rollup-plugin-node-externals": "^7.0.1",
-    "tslib": "^2.6.2",
-    "typescript": "^5.3.3"
-  },
-  "peerDependencies": {
-    "react": ">=18"
-  },
+  "files": [
+    "./out"
+  ],
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/esm/index.mjs",
-      "require": "./dist/cjs/index.cjs"
+      "types": "./out/mod.d.ts",
+      "import": "./out/mod.js"
     }
+  },
+  "devDependencies": {
+    "@hazae41/phobos": "^2.0.16",
+    "@hazae41/tscousin": "^1.0.28",
+    "@types/react": "^19.2.7",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "react": ">=19.2.3"
   },
   "keywords": [
     "typescript",
