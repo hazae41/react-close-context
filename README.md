@@ -1,6 +1,6 @@
 # CloseContext for React
 
-CloseContext provides a `close(force?)` function to React
+CloseContext provides a `close()` function to React
 
 ```bash
 npm i @hazae41/react-close-context
