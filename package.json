@@ -22,11 +22,11 @@
   "devDependencies": {
     "@hazae41/phobos": "^2.0.16",
     "@hazae41/tscousin": "^1.0.28",
-    "@types/react": "^19.2.7",
-    "typescript": "^5.9.3"
+    "@types/react": "^19.3.0",
+    "typescript": "^7.0.2"
   },
   "peerDependencies": {
-    "react": ">=19.2.3"
+    "react": ">=19.3.0"
   },
   "keywords": [
     "typescript",
@@ -35,6 +35,6 @@
     "unit-tested"
   ],
   "dependencies": {
-    "@hazae41/result-and-option": "^2.0.10"
+    "@hazae41/result-and-option": "^2.1.1"
   }
 }

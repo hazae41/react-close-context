@@ -44,7 +44,7 @@ function Dialog(props: ChildrenProps) {
 You can also provide `CloseContext` to perform your own logic
 
 ```tsx
-import { CloseContext } from "@hazae41/react-close-context"
+import { CloseProvider } from "@hazae41/react-close-context"
 
 function FunPage() {
   const [open, setOpen] = useState(false)
@@ -58,12 +58,12 @@ function FunPage() {
   }, [])
 
   return <>
-    <CloseContext.Provider value={onClose}>
+    <CloseProvider value={onClose}>
       {open && 
         <Dialog>
           Hi
         </Dialog>}
-    </CloseContext.Provider>
+    </CloseProvider>
     <button onClick={onOpen}>
       Fun?
     </button>
@@ -74,12 +74,12 @@ function FunPage() {
 You can also use the `force?` parameter to close the component as fast as possible (e.g. avoid animations)
 
 ```tsx
-import { CloseContext, useCloseContext } from "@hazae41/react-close-context"
+import { CloseProvider, useCloseContext } from "@hazae41/react-close-context"
 
 function Dialog(props: ChildrenProps) {
   const { children } = props
 
-  const close = useCloseContext().unwrap()
+  const close = useCloseContext().getOrNull()
 
   const [premount, setPremount] = useState(true)
   const [postmount, setPostmount] = useState(false)
@@ -117,9 +117,9 @@ function Dialog(props: ChildrenProps) {
     <button onClick={onCloseClick}>
       Close
     </button>
-    <CloseContext.Provider value={hide}>
+    <CloseProvider value={hide}>
       {children}
-    </CloseContext.Provider>
+    </CloseProvider>
   </div>
 }
 ```
