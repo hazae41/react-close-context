@@ -12,7 +12,7 @@ export function useCloseContext() {
   return Option.wrap(useContext(CloseContext))
 }
 
-export function CloseProvider(props: { children: ReactNode } & { value: Close }) {
+export function CloseProvider(props: { children?: ReactNode } & { value: Close }) {
   const { value, children } = props
 
   return <CloseContext.Provider value={value}>
